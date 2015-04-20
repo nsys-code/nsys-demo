@@ -1,0 +1,15 @@
+<p>Showing <b>@$!{user}'s</b> user timeline.</p>
+<table class="aui">
+	<thead>
+		<tr>
+			<th>Messages</th>
+        </tr>
+    </thead>
+   	<tbody>
+        #foreach ($tweet in $tweets)
+        <tr>
+            <td><img src="$!{tweet.user.miniProfileImageURL}" /> @$!{tweet.user.screenName} - $!{tweet.text}</td>
+        </tr>
+        #end
+    </tbody>
+</table>
