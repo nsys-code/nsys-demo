@@ -45,6 +45,7 @@
 	<modules>
 		<module>nsys-demo-daemon</module>
 		<module>nsys-demo-portal</module>
+		<module>nsys-demo-bundle</module>
 	</modules>
 	
 </project>

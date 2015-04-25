@@ -20,7 +20,7 @@
 		<interface>org.nsys.portal.webapp.demo.plugin.DemoPluginComponent</interface>
 	</component>
 
-	<navigation-section key="nsys-portal-demo_admin-demo" name="Add-ons Administration Navigation" location="system.admin/demo" weight="20">
+	<navigation-section key="nsys-portal-demo_admin-demo" name="Add-ons Administration Navigation" location="system.admin/demo" weight="1000">
 		<label>Demo</label>
 	</navigation-section>
     
