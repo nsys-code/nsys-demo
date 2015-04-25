@@ -4,7 +4,7 @@ SET NSYS_BUNDLE_DIR=%CD%\nsys-demo-bundle\target\nsys-demo
 
 IF EXIST %NSYS_BUNDLE_DIR% GOTO CONTINUE
 
-echo You need to build Nsys Platform at first! Please run command 'build.bat' ... >&2
+echo You need to build Nsys Demo at first! Please run command 'build.bat' ... >&2
 GOTO EXIT
 
 :CONTINUE

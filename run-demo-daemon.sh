@@ -3,7 +3,7 @@
 NSYS_BUNDLE_DIR=`pwd`/nsys-demo-bundle/target/nsys-demo
 
 if [[ ! -d "$NSYS_BUNDLE_DIR" ]]; then
-    echo "You need to build Nsys Platform at first! Please run command 'build.sh' ..." >&2
+    echo "You need to build Nsys Demo at first! Please run command 'build.sh' ..." >&2
     exit 1	
 fi
 
