@@ -14,7 +14,7 @@ and [Nsys Portal](http://doc.nsys.org/display/NSYS/Nsys+Portal).
 
 ### Quick start
 
- * cd <project root>
+ * cd "project root"
  * ./build
  * ./run-demo-portal.sh
  * vi nsys-demo-bundle/target/nsys-demo/logs/nsys-demo-portal.log
