@@ -1,6 +1,6 @@
 # Welcome to the Nsys Demo Source!
 
-## Quick Links
+## Quick links
 
 * [Nsys Platform Documentation][1]
 * [How to install Nsys Plugin SDK][2]
