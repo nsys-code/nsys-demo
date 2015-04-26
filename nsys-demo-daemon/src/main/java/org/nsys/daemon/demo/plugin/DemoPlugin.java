@@ -8,9 +8,9 @@ import java.util.List;
 
 import org.nsys.event.Event;
 import org.nsys.plugin.PluginContext;
-import org.nsys.daemon.core.NsysDaemonConfig;
 import org.nsys.daemon.dataprocessor.DataProcessorConfig;
 import org.nsys.daemon.dataprocessor.DataProcessorStage;
+import org.nsys.daemon.demo.NsysDemoConfig;
 import org.nsys.daemon.demo.dataprocessor.DemoGetDataStage;
 import org.nsys.daemon.demo.dataprocessor.DemoStoreDataStage;
 import org.nsys.daemon.demo.dataprocessor.DemoValidateDataStage;
@@ -27,7 +27,7 @@ public class DemoPlugin extends AbstractManagementAgentPlugin {
 	@Override
 	public void load(PluginContext context) {
 		log.debugFormat("Starting plugin %s", getName());
-		NsysDaemonConfig.loadConfig();
+		NsysDemoConfig.loadConfig();
 	}
 
 	@Override
