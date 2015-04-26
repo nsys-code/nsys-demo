@@ -19,7 +19,7 @@ and [Nsys Portal](http://doc.nsys.org/display/NSYS/Nsys+Portal).
  * ./build.sh
  * ./run-demo-portal.sh
  * vi nsys-demo-bundle/target/nsys-demo/logs/nsys-demo-portal.log
- * Browse to [http://localhost:9160](http://localhost:9160)
+ * Browse to [http://localhost:9160](http://localhost:9160). Check up live demo at [http://demo.nsys.org](http://demo.nsys.org)!
  * Use default user "admin" and password "admin" to login
 
 
