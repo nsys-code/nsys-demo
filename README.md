@@ -4,7 +4,8 @@
 
 * [Nsys Platform Documentation][1]
 * [How to install Nsys Plugin SDK][2]
-* [Issues][3]
+* [How to install and configure Nsys Platform][3]
+* [Issues][4]
 
 ## Description
 
@@ -24,4 +25,5 @@ and [Nsys Portal](http://doc.nsys.org/display/NSYS/Nsys+Portal).
 
 [1]: http://doc.nsys.org/display/NSYS/
 [2]: http://doc.nsys.org/display/NSYS/Nsys+Plugin+SDK
-[3]: http://jira.nsys.org/browse/NSYS
+[3]: http://doc.nsys.org/display/NSYS/Nsys+Installation+and+Configuration
+[4]: http://jira.nsys.org/browse/NSYS
