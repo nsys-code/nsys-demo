@@ -42,9 +42,13 @@ installation documentation: http://doc.nsys.org
 	$ chmod a+x /etc/init.d/${nsys.dist.name}-daemon
 	$ update-rc.d ${nsys.dist.name}-daemon defaults
 	$ /etc/init.d/${nsys.dist.name}-daemon start
-	
+
+
+More information about installation and configuration you can find at
+http://doc.nsys.org/display/NSYS/Nsys+Installation+and+Configuration
+
 
 Licensing
 ----------------------
 
-See http://www.nsys.org/license
+See http://nsys.org/license
