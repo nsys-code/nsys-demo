@@ -1,6 +1,9 @@
 Nsys Demo
 =========
 
+Version: ${build.number}
+
+
 About
 ----------------------
 

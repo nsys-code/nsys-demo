@@ -11,7 +11,7 @@
 		<groupId>org.nsys</groupId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
-	
+
     <groupId>org.nsys.demo</groupId>
     <artifactId>nsys-demo-bundle</artifactId>
     <name>Nsys Demo Bundle</name>
@@ -22,12 +22,12 @@
 		<name>Nsys</name>
 		<url>http://www.nsys.org</url>
 	</organization>
-  
+
 	<issueManagement>
     	<system>JIRA</system>
     	<url>https://jira.nsys.org/browse/NSYS</url>
     </issueManagement>
-    
+
     <scm>
     	<connection>scm:git:https://github.com/xboot-dev/nsys-demo.git</connection>
     </scm>
@@ -82,15 +82,16 @@
 							<tasks>
 								<!-- Create folders -->
 								<mkdir dir="${project.basedir}/target/${nsys.dist.name}" />
-								
+
 								<!-- Copy Nsys container -->
         						<copy todir="${project.basedir}/target/${nsys.dist.name}">
         							<fileset dir="${project.basedir}/target/container" includes="**/*" />
         						</copy>
-        						
+
 								<delete file="${project.basedir}/target/${nsys.dist.name}/bin/nsys-daemon.sh" />
 								<delete file="${project.basedir}/target/${nsys.dist.name}/bin/nsys-portal.sh" />
-								
+								<delete file="${project.basedir}/target/${nsys.dist.name}/portal/plugins/nsys-portal-main.jar" />
+
         						<copy file="${project.basedir}/target/classes/README.txt" todir="${project.basedir}/target/${nsys.dist.name}" overwrite="true" />
         						<copy file="${project.basedir}/target/classes/${nsys.dist.name}-daemon.sh" todir="${project.basedir}/target/${nsys.dist.name}/bin" />
         						<copy file="${project.basedir}/target/classes/${nsys.dist.name}-portal.sh" todir="${project.basedir}/target/${nsys.dist.name}/bin" />
@@ -99,16 +100,16 @@
         						<copy file="${project.basedir}/target/classes/log4j.xml" todir="${project.basedir}/target/${nsys.dist.name}/conf" overwrite="true" />
         						<copy file="${project.basedir}/target/classes/log4j-portal.xml" todir="${project.basedir}/target/${nsys.dist.name}/conf" overwrite="true" />
 								<copy file="${project.basedir}/src/main/resources/tomcat/server.xml" todir="${project.basedir}/target/${nsys.dist.name}/portal/conf" overwrite="true" />
-        									
+
 								<!-- Copy Nsys Daemon plugins to folder /plugins -->
-								<copy file="${project.basedir}/../nsys-demo-daemon/target/nsys-demo-daemon.jar" todir="${project.basedir}/target/${nsys.dist.name}/plugins" />
+								<copy file="${project.basedir}/../nsys-demo-daemon-plugins/nsys-demo-collector/target/nsys-demo-collector.jar" todir="${project.basedir}/target/${nsys.dist.name}/plugins" />
 
 								<!-- Copy Nsys Portal plugins to folder /portal/plugins -->
-								<copy file="${project.basedir}/../nsys-demo-portal/target/nsys-demo-portal.jar" todir="${project.basedir}/target/${nsys.dist.name}/portal/plugins" />
-        						
+								<copy file="${project.basedir}/../nsys-demo-portal-plugins/nsys-demo-portal-main/target/nsys-demo-portal-main.jar" todir="${project.basedir}/target/${nsys.dist.name}/portal/plugins" />
+
         						<chmod dir="${project.basedir}/target/${nsys.dist.name}/bin" perm="755" includes="*.sh" />
         						<chmod dir="${project.basedir}/target/${nsys.dist.name}/portal/bin" perm="755" includes="*.sh" />
-        						
+
 								<!-- Create bundle package -->
 								<zip basedir="${project.basedir}/target/${nsys.dist.name}/" destfile="${project.basedir}/target/${nsys.dist.name}-bundle-${build.number}.zip" encoding="UTF8" />
 							</tasks>  
@@ -125,7 +126,7 @@
 				<version>2.8.2</version>
 				<executions>
 					<execution>
-						<id>deploy-nsys-bundle</id>
+						<id>deploy-nsys-demo-bundle</id>
 						<phase>deploy</phase>
 						<goals>
 							<goal>deploy-file</goal>
@@ -161,7 +162,7 @@
     		</resource>
     	</resources>
 	</build>
-    
+
     <properties>
         <build.number>1.0.0.0</build.number>
         <nsys.version>1.0.0-SNAPSHOT</nsys.version>
@@ -169,5 +170,5 @@
         <nsys.dist.daemon.name>Nsys Demo Daemon</nsys.dist.daemon.name>
         <nsys.dist.portal.name>Nsys Demo Portal</nsys.dist.portal.name>
     </properties>
-    
+
 </project>
