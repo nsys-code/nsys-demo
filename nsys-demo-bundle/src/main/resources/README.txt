@@ -7,7 +7,11 @@ Version: ${build.number}
 About
 ----------------------
 
-This is an example of software application based on customized distribution of the Nsys Platform.
+The Nsys Demo is an example of software application based on customized 
+distribution of the Nsys Platform. It is a model implementation of the 
+add-ons for Nsys Daemon and Nsys Portal.
+
+Please see more details at http://doc.nsys.org/display/NSYS/Nsys+Demo
 
 
 Quick Installation

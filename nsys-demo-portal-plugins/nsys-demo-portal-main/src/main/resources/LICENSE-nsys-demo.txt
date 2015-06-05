@@ -18,6 +18,11 @@ limitations under the License.
 About
 =====
 
-This is an example of software application based on customized distribution of the Nsys Platform.
+The Nsys Demo is an example of software application based on customized 
+distribution of the Nsys Platform. It is a model implementation of the 
+add-ons for Nsys Daemon and Nsys Portal.
 
-More information available at http://nsys.org
+More information available at
+
+ - http://nsys.org
+ - http://doc.nsys.org/display/NSYS/Nsys+Demo

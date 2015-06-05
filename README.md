@@ -2,10 +2,11 @@
 
 ## Quick links
 
-* [Nsys Platform Documentation][1]
-* [How to install Nsys Plugin SDK][2]
-* [How to install and configure Nsys Platform][3]
-* [Issues][4]
+* [Nsys Demo Project][1]
+* [Nsys Platform Documentation][2]
+* [How to install Nsys Plugin SDK][3]
+* [How to install and configure Nsys Platform][4]
+* [Issues][5]
 
 ## Description
 
@@ -23,7 +24,8 @@ and [Nsys Portal](http://doc.nsys.org/display/NSYS/Nsys+Portal).
  * Use default user "admin" and password "admin" to login
 
 
-[1]: http://doc.nsys.org/display/NSYS/
-[2]: http://doc.nsys.org/display/NSYS/Nsys+Plugin+SDK
-[3]: http://doc.nsys.org/display/NSYS/Nsys+Installation+and+Configuration
-[4]: http://jira.nsys.org/browse/NSYS
+[1]: http://doc.nsys.org/display/NSYS/Nsys+Demo
+[2]: http://doc.nsys.org/display/NSYS/
+[3]: http://doc.nsys.org/display/NSYS/Nsys+Plugin+SDK
+[4]: http://doc.nsys.org/display/NSYS/Nsys+Installation+and+Configuration
+[5]: http://jira.nsys.org/browse/NSYS
