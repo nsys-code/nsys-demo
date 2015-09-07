@@ -99,6 +99,9 @@
         						<copy file="${project.basedir}/target/classes/nsys-portal.cfg" todir="${project.basedir}/target/${nsys.dist.name}/conf" overwrite="true" />
         						<copy file="${project.basedir}/target/classes/log4j.xml" todir="${project.basedir}/target/${nsys.dist.name}/conf" overwrite="true" />
         						<copy file="${project.basedir}/target/classes/log4j-portal.xml" todir="${project.basedir}/target/${nsys.dist.name}/conf" overwrite="true" />
+        						<copy file="${project.basedir}/target/classes/database.h2.properties.dist" todir="${project.basedir}/target/${nsys.dist.name}/conf" overwrite="true" />
+        						<copy file="${project.basedir}/target/classes/database.h2.properties.dist" tofile="${project.basedir}/target/${nsys.dist.name}/conf/database.properties" overwrite="true" />
+        						<copy file="${project.basedir}/target/classes/database.h2.properties.dist" tofile="${project.basedir}/target/${nsys.dist.name}/conf/database-portal.properties" overwrite="true" />
 								<copy file="${project.basedir}/src/main/resources/tomcat/server.xml" todir="${project.basedir}/target/${nsys.dist.name}/portal/conf" overwrite="true" />
 
 								<!-- Copy Nsys Daemon plugins to folder /plugins -->

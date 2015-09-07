@@ -41,11 +41,11 @@
     </logger>
     
     <logger name="org.hibernate">
-        <level value="INFO" />
+        <level value="ERROR" />
     </logger>
     
     <logger name="com.mchange">
-        <level value="INFO" />
+        <level value="ERROR" />
     </logger>
     
     <logger name="org.nsys.portal.servlet.PortalDispatcherServlet">

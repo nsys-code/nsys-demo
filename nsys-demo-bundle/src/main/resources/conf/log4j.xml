@@ -43,7 +43,15 @@
     <logger name="org.springframework">
         <level value="ERROR" />
     </logger>
-    
+
+    <logger name="org.hibernate">
+        <level value="ERROR" />
+    </logger>
+
+    <logger name="com.mchange">
+        <level value="ERROR" />
+    </logger>
+
     <root>
         <priority value="DEBUG" />
         <appender-ref ref="rollingLogFileAppender" />

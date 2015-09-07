@@ -3,9 +3,6 @@
 
 package org.nsys.demo.portal.webapp;
 
-import org.nsys.system.ComponentProvider;
-import org.nsys.daemon.user.DefaultUser;
-import org.nsys.daemon.user.UserManager;
 import org.nsys.portal.AbstractPortalConfig;
 
 /**
@@ -26,31 +23,10 @@ public class NsysDemoPortalConfig extends AbstractPortalConfig {
 		setPortalCopyright(getCopyrightHtml());
 		setPortalVersion(NsysDemoConfig.getVersion());
 		setPortalBuildNumber(NsysDemoConfig.getBuildNumber());
-
-		createBuildinUsers();
 	}
 
 	protected String getCopyrightHtml() {
 		String html = "Copyright &copy; 2015 <a href=\"http://tomas.hrdlicka.co.uk\" title=\"Tomas Xboot Hrdlicka\">Tomas Hrdlicka</a>";
 		return html;
-	}
-
-	protected void createBuildinUsers() {
-		log.debug("Creating default portal build-in users...");
-
-		UserManager userManager = ComponentProvider.getInstance().getComponent(UserManager.class);
-
-        addUser(userManager, "admin", "A. D. Ministrator (Sysadmin)", "admin@nsys.org", "admin");
-        addUser(userManager, "fred", "Fred Sysadmin", "fred@nsys.org", "fred");
-        addUser(userManager, "barney", "Barney User", "barney@nsys.org", "barney");
-        addUser(userManager, "betty", "Betty Admin", "betty@nsys.org", "betty");
-    }
-
-	protected void addUser(UserManager userManager, String login, String fullname, String email, String password) {
-		DefaultUser user = (DefaultUser) userManager.createUser(login);
-		user.setFullname(fullname);
-		user.setEmail(email);
-        userManager.alterPassword(user, password); 
-        userManager.saveUser(user);
 	}
 }
