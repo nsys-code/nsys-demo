@@ -7,7 +7,7 @@
 
 connectionDriver=org.h2.Driver
 connectionDialect=org.hibernate.dialect.H2Dialect
-#connectionUrl=jdbc:h2:mem:nsys;DB_CLOSE_DELAY=-1
+#connectionUrl=jdbc:h2:mem:nsys-demo;DB_CLOSE_DELAY=-1
 connectionUrl=jdbc:h2:file:${nsys.home}/database/nsys-demo;MV_STORE=FALSE;DB_CLOSE_ON_EXIT=FALSE
 connectionProperties.user=sa
 connectionProperties.password=
