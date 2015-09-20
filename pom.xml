@@ -30,7 +30,7 @@
     	<repository>
       		<id>nsys-maven-repository</id>
     		<name>Nsys Repository - Releases</name>
-      		<url>http://maven.nsys.org/repository/internal/</url>
+      		<url>http://maven.nsys.org/repository/releases/</url>
     		<layout>default</layout>
     	</repository>
     	<snapshotRepository>
