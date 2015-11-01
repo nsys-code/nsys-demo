@@ -15,7 +15,7 @@ import org.nsys.util.ConfigurationManager;
  * @see <a href="http://nsys.org">Nsys</a>
  */
 public class NsysDemoConfig {
-	private static final Log log = new Log(NsysDemoConfig.class);
+	private static final Log log = Log.getLogger(NsysDemoConfig.class);
 
 	public static final String CONFIG_NAME = "nsys-demo.cfg";
 	public static final String VERSION = "nsys.demo.version";

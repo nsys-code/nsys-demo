@@ -22,7 +22,7 @@ import org.nsys.demo.portal.webapp.NsysDemoConfig;
  * @see <a href="http://nsys.org">Nsys</a>
  */
 public class TwitterHelper {
-	private static final Log log = new Log(TwitterHelper.class);
+	private static final Log log = Log.getLogger(TwitterHelper.class);
 
 	private static Twitter twitterInstance;
 

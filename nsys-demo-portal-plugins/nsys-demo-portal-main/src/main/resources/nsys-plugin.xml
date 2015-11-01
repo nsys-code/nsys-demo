@@ -80,6 +80,27 @@
 		</conditions>
 	</navigation-item>
 
+	<navigation-section key="nsys-portal_nav-main_system" name="System" location="system.top.navigation.bar/system" weight="0">
+		<label>System</label>
+		<description>Nsys Platform Management</description>
+	</navigation-section>
+
+	<navigation-item key="nsys-portal_nav-main_system_infra-mgmt" name="Nsys Infrastructure Manager" section="system.top.navigation.bar/system" weight="0">
+		<label>Infrastructure Manager</label>
+		<link>/nim</link>
+		<conditions>
+			<condition class="org.nsys.portal.conditions.UserIsLoggedInCondition" />
+		</conditions>
+	</navigation-item>
+
+	<navigation-item key="nsys-portal_nav-main_system_pp-mgmt" name="Manage Portal Panels" section="system.top.navigation.bar/system" weight="0">
+		<label>Manage Portal Panels</label>
+		<link>/pp/manage</link>
+		<conditions>
+			<condition class="org.nsys.portal.conditions.UserIsLoggedInCondition" />
+		</conditions>
+	</navigation-item>
+
     <!-- Main Navigation [END] -->
 
     <!-- Navigation 'footer.links' [BEGIN] -->

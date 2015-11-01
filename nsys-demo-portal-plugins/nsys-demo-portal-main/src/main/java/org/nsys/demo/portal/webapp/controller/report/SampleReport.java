@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import org.nsys.util.IOUtils;
+import org.nsys.portal.chart.ChartConfig;
 import org.nsys.portal.controller.AbstractReportController;
-import org.nsys.portal.report.ChartConfig;
 
 /**
  * Sample Report
