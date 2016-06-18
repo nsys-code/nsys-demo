@@ -3,7 +3,7 @@
 <nsys-plugin key="${project.groupId}.${project.artifactId}" name="${project.name}" plugin-version="1">
 
     <!-- Plugin Info -->
-    
+
 	<plugin-info>
 		<description>${project.description}</description>
 		<version>${build.number}</version>
@@ -15,5 +15,14 @@
 	<management-agent key="nsys-demo-collector" name="Nsys Demo Collector" class="org.nsys.demo.daemon.collector.plugin.CollectorPlugin">
 		<dependency>org.nsys.daemon:scheduler</dependency>
 	</management-agent>
+
+	<management-agent key="nsys-demo-data-collector" name="Nsys Demo Data Collector" class="org.nsys.demo.daemon.collector.plugin.DataCollectorPlugin">
+		<dependency>org.nsys.daemon:scheduler</dependency>
+	</management-agent>
+
+	<api key="nsys-demo-collector_api" name="Nsys Demo Collector Public API"
+		 path="/demo-collector" version="v1" configLocation="META-INF/cxf/apiContext.xml">
+		<description>Provides Nsys Demo Collector public services.</description>
+	</api>
 
 </nsys-plugin>

@@ -1,4 +1,4 @@
-/* Copyright 2012, 2015 Nsys.org - Tomas Hrdlicka <tomas@hrdlicka.co.uk>. All rights reserved.
+/* Copyright 2012, 2016 Nsys.org - Tomas Hrdlicka <tomas@hrdlicka.co.uk>. All rights reserved.
  */
 
 package org.nsys.demo.portal.webapp.plugin;
@@ -20,24 +20,24 @@ public class PortalPlugin extends AbstractManagementAgentPlugin {
 
 	@Override
 	public void load(PluginContext context) {
-		log.debugFormat("Starting plugin %s", getName());
+		getLog().debugFormat("Starting plugin %s", getName());
 		NsysDemoConfig.loadConfig();
 	}
 
 	@Override
 	public void unload(PluginContext context) {
-		log.debugFormat("Stopped plugin %s", getName());
+		getLog().debugFormat("Stopped plugin %s", getName());
 	}
 
 	@Override
 	public void handleEvent(PluginContext context, Event event) {
 		if (event != null) {
 			if (event instanceof PortalStartedEvent) {
-				log.info("Nsys Portal has been started successfully!");
+				getLog().info("Nsys Portal has been started successfully!");
 			}
 
 			else if (event instanceof SystemStartedEvent) {
-				log.info("The system is up and running!");
+				getLog().info("The system is up and running!");
 			}
 		}
 	}

@@ -1,4 +1,4 @@
-/* Copyright 2012, 2015 Nsys.org - Tomas Hrdlicka <tomas@hrdlicka.co.uk>. All rights reserved.
+/* Copyright 2012, 2016 Nsys.org - Tomas Hrdlicka <tomas@hrdlicka.co.uk>. All rights reserved.
  */
 
 package org.nsys.demo.portal.webapp;
@@ -26,7 +26,7 @@ public class NsysDemoPortalConfig extends AbstractPortalConfig {
 	}
 
 	protected String getCopyrightHtml() {
-		String html = "Copyright &copy; 2015 <a href=\"http://tomas.hrdlicka.co.uk\" title=\"Tomas Xboot Hrdlicka\">Tomas Hrdlicka</a>";
+		String html = "Copyright &copy; 2016 <a href=\"http://tomas.hrdlicka.co.uk\" title=\"Tomas Xboot Hrdlicka\">Tomas Hrdlicka</a>";
 		return html;
 	}
 }

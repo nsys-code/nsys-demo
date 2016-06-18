@@ -7,12 +7,12 @@
 
     <appender name="consoleAppender" class="org.apache.log4j.ConsoleAppender">
         <layout class="org.apache.log4j.PatternLayout">
-            <param name="ConversionPattern" value="[%t] %-5p: %m - %c{1}%n" />
+            <param name="ConversionPattern" value="[%t] %-5p: %m%n" />
         </layout>
     </appender>
 
     <appender name="rollingLogFileAppender" class="org.apache.log4j.DailyRollingFileAppender">
-        <param name="File" value="${nsys.basedir}/logs/${nsys.dist.name}-daemon.log" />
+        <param name="File" value="${nsys.basedir}/logs/${nsys.dist.name}-daemon-cli.log" />
         <param name="DatePattern" value="'.'yyyy-MM-dd" />
         <param name="Encoding" value="UTF-8" />
         <layout class="org.apache.log4j.PatternLayout">
@@ -28,20 +28,12 @@
         <level value="INFO" />
     </logger>
 
+    <logger name="org.apache.cxf.service.factory.ReflectionServiceFactoryBean">
+        <level value="WARN" />
+    </logger>
+
     <logger name="org.apache.activemq">
         <level value="INFO" />
-    </logger>
-
-    <logger name="org.apache.velocity">
-        <level value="INFO" />
-    </logger>
-
-    <logger name="org.eclipse.jetty">
-        <level value="INFO" />
-    </logger>
-
-    <logger name="org.springframework">
-        <level value="ERROR" />
     </logger>
 
     <logger name="org.hibernate">
@@ -49,10 +41,6 @@
     </logger>
 
     <logger name="com.mchange">
-        <level value="ERROR" />
-    </logger>
-
-    <logger name="com.hazelcast">
         <level value="ERROR" />
     </logger>
 

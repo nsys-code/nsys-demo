@@ -19,7 +19,7 @@
             <param name="ConversionPattern" value="%d [%t] %-5p %c - %m%n" />
         </layout>
     </appender>
-    
+
     <logger name="org.quartz.core">
         <level value="INFO" />
     </logger>
@@ -27,31 +27,35 @@
     <logger name="org.apache.cxf">
         <level value="INFO" />
     </logger>
-    
+
     <logger name="org.apache.activemq">
         <level value="INFO" />
     </logger>
-    
+
     <logger name="org.apache.velocity">
         <level value="INFO" />
     </logger>
-    
+
     <logger name="org.springframework">
         <level value="ERROR" />
     </logger>
-    
+
     <logger name="org.hibernate">
         <level value="ERROR" />
     </logger>
-    
+
     <logger name="com.mchange">
         <level value="ERROR" />
     </logger>
-    
+
+    <logger name="com.hazelcast">
+        <level value="ERROR" />
+    </logger>
+
     <logger name="org.nsys.portal.servlet.PortalDispatcherServlet">
         <level value="ERROR" />
     </logger>
-    
+
     <root>
         <priority value="DEBUG" />
         <appender-ref ref="rollingLogFileAppender" />

@@ -1,4 +1,4 @@
-/* Copyright 2012, 2015 Nsys.org - Tomas Hrdlicka <tomas@hrdlicka.co.uk>. All rights reserved.
+/* Copyright 2012, 2016 Nsys.org - Tomas Hrdlicka <tomas@hrdlicka.co.uk>. All rights reserved.
  */
 
 package org.nsys.demo.daemon.collector.plugin;
@@ -31,13 +31,13 @@ public class CollectorPlugin extends AbstractManagementAgentPlugin {
 
 	@Override
 	public void load(PluginContext context) {
-		log.debugFormat("Starting plugin %s", getName());
+		getLog().debugFormat("Starting plugin %s", getName());
 		CollectorConfig.loadConfig();
 	}
 
 	@Override
 	public void unload(PluginContext context) {
-		log.debugFormat("Stopped plugin %s", getName());
+		getLog().debugFormat("Stopped plugin %s", getName());
 	}
 
 	@Override
@@ -45,12 +45,12 @@ public class CollectorPlugin extends AbstractManagementAgentPlugin {
 		if (event != null) {
 			if (event instanceof DaemonStartedEvent) {
 				// The Nsys Daemon Lite mode is used for nodes having limited system resources. 
-				log.infoFormat("Nsys Daemon has been started successfully! Nsys Daemon Lite Mode: %s", 
+				getLog().infoFormat("Nsys Daemon has been started successfully! Nsys Daemon Lite Mode: %s",
 						NsysDaemonConfig.isNsysDaemonLite());
 			}
 
 			else if (event instanceof SystemStartedEvent) {
-				log.info("The system is up and running!");
+				getLog().info("The system is up and running!");
 			}
 		}
 	}
@@ -60,7 +60,7 @@ public class CollectorPlugin extends AbstractManagementAgentPlugin {
 		DataProcessorConfig config = new DataProcessorConfig();
 		config.setRunnerJobEnabled(true);
 		config.setRunnerJobDelay(60 * 1000); // starts after one minute
-		config.setRunnerJobInterval((60 * 1000) * 5); // runs each 5 mins 
+		config.setRunnerJobInterval((60 * 1000) * 5); // runs each 5 mins
 		return config;
 	}
 

@@ -16,6 +16,10 @@
 		<dependency>org.nsys.daemon:scheduler</dependency>
 	</management-agent>
 
+	<api key="nsys-demo_api" name="Nsys Demo Public API" path="/demo" version="v1" configLocation="META-INF/cxf/apiContext.xml">
+		<description>Provides Nsys Demo public services.</description>
+	</api>
+
 	<component key="nsys-demo-portal_plugin-component" name="Portal Plugin Component" class="org.nsys.demo.portal.webapp.plugin.PortalPluginComponentImpl" system="false">
 		<interface>org.nsys.demo.portal.webapp.plugin.PortalPluginComponent</interface>
 	</component>

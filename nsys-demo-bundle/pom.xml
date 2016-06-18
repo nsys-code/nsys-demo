@@ -89,15 +89,19 @@
         						</copy>
 
 								<delete file="${project.basedir}/target/${nsys.dist.name}/bin/nsys-daemon.sh" />
+								<delete file="${project.basedir}/target/${nsys.dist.name}/bin/nsys-daemon-cli.sh" />
 								<delete file="${project.basedir}/target/${nsys.dist.name}/bin/nsys-portal.sh" />
 								<delete file="${project.basedir}/target/${nsys.dist.name}/portal/plugins/nsys-portal-main.jar" />
 
         						<copy file="${project.basedir}/target/classes/README.txt" todir="${project.basedir}/target/${nsys.dist.name}" overwrite="true" />
         						<copy file="${project.basedir}/target/classes/${nsys.dist.name}-daemon.sh" todir="${project.basedir}/target/${nsys.dist.name}/bin" />
+        						<copy file="${project.basedir}/target/classes/${nsys.dist.name}-daemon-cli.sh" todir="${project.basedir}/target/${nsys.dist.name}/bin" />
         						<copy file="${project.basedir}/target/classes/${nsys.dist.name}-portal.sh" todir="${project.basedir}/target/${nsys.dist.name}/bin" />
         						<copy file="${project.basedir}/target/classes/nsys.cfg" todir="${project.basedir}/target/${nsys.dist.name}/conf" overwrite="true" />
+        						<copy file="${project.basedir}/target/classes/nsys-cli.cfg" todir="${project.basedir}/target/${nsys.dist.name}/conf" overwrite="true" />
         						<copy file="${project.basedir}/target/classes/nsys-portal.cfg" todir="${project.basedir}/target/${nsys.dist.name}/conf" overwrite="true" />
         						<copy file="${project.basedir}/target/classes/log4j.xml" todir="${project.basedir}/target/${nsys.dist.name}/conf" overwrite="true" />
+        						<copy file="${project.basedir}/target/classes/log4j-cli.xml" todir="${project.basedir}/target/${nsys.dist.name}/conf" overwrite="true" />
         						<copy file="${project.basedir}/target/classes/log4j-portal.xml" todir="${project.basedir}/target/${nsys.dist.name}/conf" overwrite="true" />
         						<copy file="${project.basedir}/target/classes/database.h2.properties.dist" todir="${project.basedir}/target/${nsys.dist.name}/conf" overwrite="true" />
         						<copy file="${project.basedir}/target/classes/database.h2.properties.dist" tofile="${project.basedir}/target/${nsys.dist.name}/conf/database.properties" overwrite="true" />
