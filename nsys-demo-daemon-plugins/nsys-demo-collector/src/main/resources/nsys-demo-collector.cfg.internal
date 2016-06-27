@@ -1,0 +1,2 @@
+# Internal configuration file for nsys-demo-collector
+nsys.demo.collector.version=${build.number}

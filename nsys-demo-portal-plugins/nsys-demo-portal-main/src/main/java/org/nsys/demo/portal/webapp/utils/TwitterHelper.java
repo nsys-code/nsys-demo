@@ -1,4 +1,4 @@
-/* Copyright 2012, 2015 Nsys.org - Tomas Hrdlicka <tomas@hrdlicka.co.uk>. All rights reserved.
+/* Copyright 2012, 2016 Nsys.org - Tomas Hrdlicka <tomas@hrdlicka.co.uk>. All rights reserved.
  */
 
 package org.nsys.demo.portal.webapp.utils;
@@ -13,7 +13,7 @@ import twitter4j.auth.OAuth2Token;
 import twitter4j.conf.ConfigurationBuilder;
 
 import org.nsys.logging.Log;
-import org.nsys.demo.portal.webapp.NsysDemoConfig;
+import org.nsys.demo.portal.webapp.PortalConfig;
 
 /**
  * Twitter Helper
@@ -33,10 +33,10 @@ public class TwitterHelper {
 
         try {
     		ConfigurationBuilder cb = new ConfigurationBuilder();
-    		cb.setDebugEnabled(NsysDemoConfig.getTwitterDebugEnabled());
+    		cb.setDebugEnabled(PortalConfig.getTwitterDebugEnabled());
     		cb.setApplicationOnlyAuthEnabled(true);
-    	    cb.setOAuthConsumerKey(NsysDemoConfig.getTwitterConsumerKey());
-    	    cb.setOAuthConsumerSecret(NsysDemoConfig.getTwitterConsumerSecret());
+    	    cb.setOAuthConsumerKey(PortalConfig.getTwitterConsumerKey());
+    	    cb.setOAuthConsumerSecret(PortalConfig.getTwitterConsumerSecret());
 
             TwitterFactory tf = new TwitterFactory(cb.build());
             twitterInstance = tf.getInstance();

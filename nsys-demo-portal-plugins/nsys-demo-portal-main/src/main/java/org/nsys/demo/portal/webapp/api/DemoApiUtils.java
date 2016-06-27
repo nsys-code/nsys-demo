@@ -8,7 +8,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.nsys.demo.portal.webapp.NsysDemoConfig;
+import org.nsys.demo.portal.webapp.PortalConfig;
 
 /**
  * Nsys Demo API Utils
@@ -25,8 +25,8 @@ public class DemoApiUtils {
 			headers.put("X-Nsys-Demo-API-ServerName", request.getServerName());
 		}
 
-		headers.put("X-Nsys-Demo-API-Version", NsysDemoConfig.getVersion());
-		headers.put("X-Nsys-Demo-API-BuildNumber", NsysDemoConfig.getBuildNumber());
+		headers.put("X-Nsys-Demo-API-Version", PortalConfig.getVersion());
+		headers.put("X-Nsys-Demo-API-BuildNumber", PortalConfig.getBuildNumber());
 		return headers;
 	}
 }

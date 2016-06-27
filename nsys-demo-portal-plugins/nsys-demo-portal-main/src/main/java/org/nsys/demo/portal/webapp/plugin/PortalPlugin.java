@@ -8,7 +8,7 @@ import org.nsys.plugin.PluginContext;
 import org.nsys.daemon.event.SystemStartedEvent;
 import org.nsys.daemon.plugin.AbstractManagementAgentPlugin;
 import org.nsys.portal.event.PortalStartedEvent;
-import org.nsys.demo.portal.webapp.NsysDemoConfig;
+import org.nsys.demo.portal.webapp.PortalConfig;
 
 /**
  * Nsys Demo Portal Main Plugin
@@ -21,7 +21,7 @@ public class PortalPlugin extends AbstractManagementAgentPlugin {
 	@Override
 	public void load(PluginContext context) {
 		getLog().debugFormat("Starting plugin %s", getName());
-		NsysDemoConfig.loadConfig();
+		PortalConfig.loadConfig();
 	}
 
 	@Override

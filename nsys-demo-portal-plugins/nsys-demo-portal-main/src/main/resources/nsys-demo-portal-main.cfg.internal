@@ -1,0 +1,2 @@
+# Internal configuration file for nsys-demo-portal-main
+nsys.demo.portal.main.version=${build.number}

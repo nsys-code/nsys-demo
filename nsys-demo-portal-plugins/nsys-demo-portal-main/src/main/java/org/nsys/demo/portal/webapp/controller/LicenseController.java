@@ -1,4 +1,4 @@
-/* Copyright 2012, 2015 Nsys.org - Tomas Hrdlicka <tomas@hrdlicka.co.uk>. All rights reserved.
+/* Copyright 2012, 2016 Nsys.org - Tomas Hrdlicka <tomas@hrdlicka.co.uk>. All rights reserved.
  */
 
 package org.nsys.demo.portal.webapp.controller;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import org.nsys.logging.Log;
 import org.nsys.cloudlet.web.utils.ResourceDownloadHelper;
-import org.nsys.demo.portal.webapp.NsysDemoConfig;
+import org.nsys.demo.portal.webapp.PortalConfig;
 
 /**
  * License Controller
@@ -25,7 +25,7 @@ import org.nsys.demo.portal.webapp.NsysDemoConfig;
 @Controller
 @RequestMapping("/license")
 public class LicenseController {
-	private final Log log = new Log(LicenseController.class);
+	private static final Log log = Log.getLogger(LicenseController.class);
 
 	public static final String LICENSE_FILE_PATH = "/LICENSE-nsys-demo.txt";
 
@@ -35,9 +35,9 @@ public class LicenseController {
 			HttpServletResponse response) {
 
 		try {
-			ResourceDownloadHelper.fileDownload(LICENSE_FILE_PATH, NsysDemoConfig.getPluginKey(), request, response);
+			ResourceDownloadHelper.fileDownload(LICENSE_FILE_PATH, PortalConfig.getPluginKey(), request, response);
 
-		} catch (IOException ex) {
+		} catch (final IOException ex) {
 			log.warn(String.format("Unable to download resource '%s'!", LICENSE_FILE_PATH), ex);
 		}
 	}

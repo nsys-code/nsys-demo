@@ -11,7 +11,7 @@ import org.nsys.portal.AbstractPortalConfig;
  * @author Tomas Hrdlicka <tomas@hrdlicka.co.uk>
  * @see <a href="http://nsys.org">Nsys</a>
  */
-public class NsysDemoPortalConfig extends AbstractPortalConfig {
+public class NsysDemoPortalMainConfig extends AbstractPortalConfig {
 
 	public static final String PORTAL_NAME = "Nsys Demo Portal";
 	public static final String PORTAL_LOGO_TEXT = "NSYS DEMO";
@@ -21,8 +21,8 @@ public class NsysDemoPortalConfig extends AbstractPortalConfig {
 		setPortalName(PORTAL_NAME);
 		setPortalLogoText(PORTAL_LOGO_TEXT);
 		setPortalCopyright(getCopyrightHtml());
-		setPortalVersion(NsysDemoConfig.getVersion());
-		setPortalBuildNumber(NsysDemoConfig.getBuildNumber());
+		setPortalVersion(PortalConfig.getVersion());
+		setPortalBuildNumber(PortalConfig.getBuildNumber());
 	}
 
 	protected String getCopyrightHtml() {
