@@ -133,6 +133,12 @@
         <Valve className="org.apache.catalina.authenticator.SingleSignOn" />
         -->
 
+		<!-- Handling redirects behind the external HTTPs reverse proxy -->
+        <Valve className="org.apache.catalina.valves.RemoteIpValve"
+               remoteIpHeader="X-Forwarded-For"
+               protocolHeader="X-Forwarded-Proto"
+               protocolHeaderHttpsValue="https" />
+
         <!-- Access log processes all example.
              Documentation at: /docs/config/valve.html
              Note: The pattern used is equivalent to using pattern="common" -->
@@ -148,6 +154,7 @@
         <Alias>daemon.dev.nsys.org</Alias>
         <Logger className="org.apache.catalina.logger.FileLogger" directory="logs" prefix="daemon.nsys.org." suffix=".log" timestamp="true" />
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" prefix="daemon.nsys.org." suffix=".log" pattern="common" />
+		<Valve className="org.apache.catalina.valves.RemoteIpValve" remoteIpHeader="X-Forwarded-For" protocolHeader="X-Forwarded-Proto" protocolHeaderHttpsValue="https" />
       </Host>
       -->
 
@@ -158,6 +165,7 @@
         <Alias>demo.dev.nsys.org</Alias>
         <Logger className="org.apache.catalina.logger.FileLogger" directory="logs" prefix="demo.nsys.org." suffix=".log" timestamp="true" />
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" prefix="demo.nsys.org." suffix=".log" pattern="common" />
+		<Valve className="org.apache.catalina.valves.RemoteIpValve" remoteIpHeader="X-Forwarded-For" protocolHeader="X-Forwarded-Proto" protocolHeaderHttpsValue="https" />
       </Host>
       -->
       
