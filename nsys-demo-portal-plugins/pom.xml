@@ -29,8 +29,16 @@
     </issueManagement>
     
     <scm>
-    	<connection>scm:git:https://github.com/xboot-dev/nsys-demo.git</connection>
+    	<connection>scm:git:https://github.com/nsys-code/nsys-demo.git</connection>
     </scm>
+
+    <developers>
+        <developer>
+		    <id>xboot</id>
+		    <name>Tomas Hrdlicka</name>
+		    <email>tomas@hrdlicka.co.uk</email>
+	    </developer>
+    </developers>
 
     <modules>
         <module>nsys-demo-portal-main</module>
