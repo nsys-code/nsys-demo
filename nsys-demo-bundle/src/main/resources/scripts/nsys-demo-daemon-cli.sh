@@ -9,4 +9,5 @@ if [ "x$NSYS_BASEDIR" = "x" ]; then
     echo "Variable NSYS_BASEDIR is missing! Using default..." >&2
 fi
 
+export NSYS_BASEDIR
 $NSYS_BASEDIR/bin/nsys-launcher.sh nsys-daemon-cli run "$@"
