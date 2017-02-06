@@ -183,7 +183,7 @@
 
     <!-- Navigation 'system.admin/demo' [BEGIN] -->
 
-	<navigation-section key="nsys-demo-portal_admin-demo" name="Add-ons Administration Navigation" location="system.admin/demo" weight="1000">
+	<navigation-section key="nsys-demo-portal_admin-demo" name="Add-ons Administration Navigation" location="system.admin/demo" weight="90">
 		<label>Demo</label>
 	</navigation-section>
 
@@ -227,12 +227,19 @@
     	<column>right</column>
     	<order>0</order>
     </admin-gadget>
-    
+
+    <admin-gadget key="nsys-demo-portal_admin-gadget_support" name="Support Admin Gadget" class="org.nsys.portal.webapp.admin.gadget.SupportGadget">
+    	<description>Provides an overview for the Support gadget.</description>
+    	<label>Support</label>
+    	<column>right</column>
+    	<order>1</order>
+    </admin-gadget>
+        
     <admin-gadget key="nsys-demo-portal_admin-gadget-demo" name="Add-ons Admin Gadget" class="org.nsys.demo.portal.webapp.gadget.DemoGadget">
     	<description>Provides an overview for the Demo gadget.</description>
     	<label>Demo</label>
     	<column>left</column>
-    	<order>1</order>
+    	<order>2</order>
     </admin-gadget>
 
     <!-- Nsys Portal Administration Gadgets [END] -->
