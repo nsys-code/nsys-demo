@@ -54,6 +54,31 @@
 		</repository>
   	</repositories>
   	
+	<pluginRepositories>
+        <pluginRepository>
+			<id>nsys-dev-repository</id>
+			<name>The Nsys Development Repository</name>
+			<url>http://maven.nsys.org/repository/releases</url>
+        </pluginRepository>
+        <pluginRepository>
+			<id>nsys-dev-repository-snapshots</id>
+			<name>The Nsys Development Repository - Snapshots</name>
+			<url>http://maven.nsys.org/repository/snapshots</url>
+        </pluginRepository>
+    </pluginRepositories>
+    
+    <profiles>
+    	<profile>
+    		<id>java8-doclint-disabled</id>
+    		<activation>
+    			<jdk>[1.8,)</jdk>
+    		</activation>
+    		<properties>
+    			<javadoc.opts>-Xdoclint:none</javadoc.opts>
+    		</properties>
+    	</profile>
+    </profiles>
+    
 	<dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -135,6 +160,9 @@
 						<goals>
 							<goal>jar</goal>
 						</goals>
+						<configuration>
+							<additionalparam>${javadoc.opts}</additionalparam>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
