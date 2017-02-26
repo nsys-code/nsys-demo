@@ -28,6 +28,8 @@
         <jaxrs:providers>
         	<ref bean="jsonProvider" />
             <ref bean="jaxbXmlProvider" />
+            <ref bean="nsysAuthenticationFilter" />
+            <ref bean="nsysAuthorizationFilter" />
         </jaxrs:providers>
         <jaxrs:features>
             <!-- <cxf:logging /> -->

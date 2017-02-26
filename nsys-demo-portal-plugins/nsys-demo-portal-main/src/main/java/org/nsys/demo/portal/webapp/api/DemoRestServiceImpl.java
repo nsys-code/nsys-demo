@@ -1,4 +1,4 @@
-/* Copyright 2012, 2016 Nsys.org - Tomas Hrdlicka <tomas@hrdlicka.co.uk>. All rights reserved.
+/* Copyright 2012, 2017 Nsys.org - Tomas Hrdlicka <tomas@hrdlicka.co.uk>. All rights reserved.
  */
 
 package org.nsys.demo.portal.webapp.api;
@@ -11,6 +11,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.SecurityContext;
 import javax.ws.rs.core.Response.Status;
 
 import org.springframework.stereotype.Service;
@@ -33,6 +34,13 @@ public class DemoRestServiceImpl implements DemoRestService {
     protected final Log log = Log.getLogger(DemoRestServiceImpl.class);
     protected DemoApiService api;
 
+    @Context
+    private SecurityContext securityContext;
+
+	protected Log getLog() {
+		return log;
+	}
+
 	public DemoApiService getApi() {
 		if (api == null) {
 			api = DemoApiServiceImpl.getInstance();
@@ -41,8 +49,8 @@ public class DemoRestServiceImpl implements DemoRestService {
 		return api;
 	}
 
-	protected Log getLog() {
-		return log;
+	public SecurityContext getSecurityContext() {
+		return securityContext;
 	}
 
 	@GET
