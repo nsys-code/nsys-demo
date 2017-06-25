@@ -100,8 +100,10 @@
                 	<productVersion>${nsys.version}</productVersion>
                 	<buildNumber>${build.number}</buildNumber> <!-- ${build.number}=${build.version}.${build.counter} -->
                 	<jvmArgs>-Dtwitter4j.loggerFactory=twitter4j.NullLoggerFactory</jvmArgs>
+					<port>9161</port>
                 	<nsysConfigPath>${project.basedir}/conf/nsys-portal.cfg</nsysConfigPath>
                 	<!-- <log4jConfigPath>${project.build.directory}/container/nsys1x/conf/log4j-portal.xml</log4jConfigPath> -->
+                    <dbConfigPath>${project.basedir}/conf/database-portal.properties</dbConfigPath>
                 	<bundleEntries>
                 		<Bundle-Name>${project.artifactId}</Bundle-Name>
                 	</bundleEntries>
