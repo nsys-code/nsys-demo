@@ -107,7 +107,14 @@
         						<copy file="${project.basedir}/target/classes/database.h2.properties.dist" tofile="${project.basedir}/target/${nsys.dist.name}/conf/database.properties" overwrite="true" />
         						<copy file="${project.basedir}/target/classes/database.h2.properties.dist" tofile="${project.basedir}/target/${nsys.dist.name}/conf/database-portal.properties" overwrite="true" />
 								<copy file="${project.basedir}/src/main/resources/tomcat/server.xml" todir="${project.basedir}/target/${nsys.dist.name}/portal/conf" overwrite="true" />
-
+								
+								<!-- Change default port numbers for Nsys Daemon and Nsys Portal -->
+								<replace token="9080" value="9180" file="${project.basedir}/target/${nsys.dist.name}/bin/nsys-daemon.env.sh" />
+								<replace token="9060" value="9160" file="${project.basedir}/target/${nsys.dist.name}/bin/nsys-portal.env.sh" />
+								<replace token="9070" value="9170" file="${project.basedir}/target/${nsys.dist.name}/bin/nsys-portal.env.sh" />
+								<replace token="9040" value="9140" file="${project.basedir}/target/${nsys.dist.name}/bin/nsys-portal.env.sh" />
+								<replace token="9050" value="9150" file="${project.basedir}/target/${nsys.dist.name}/bin/nsys-portal.env.sh" />
+								
 								<!-- Copy Nsys Daemon plugins to folder /plugins -->
 								<copy file="${project.basedir}/../nsys-demo-daemon-plugins/nsys-demo-collector/target/nsys-demo-collector.jar" todir="${project.basedir}/target/${nsys.dist.name}/plugins" />
 

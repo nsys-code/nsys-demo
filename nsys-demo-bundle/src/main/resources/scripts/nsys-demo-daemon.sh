@@ -21,10 +21,11 @@ NSYS_BASEDIR="/opt/${nsys.dist.name}"
 
 nsysctl() {
 	if [[ "x$USER" != "x$RUN_AS" ]]; then
-		su - "$RUN_AS" -c "export NSYS_BASEDIR=$NSYS_BASEDIR;export APPLICATION_DESC=\"$APPLICATION_DESC\";$NSYS_BASEDIR/bin/$1 $2 $3"
+		su - "$RUN_AS" -c "export NSYS_BASEDIR=$NSYS_BASEDIR;export APPLICATION_DESC=\"$APPLICATION_DESC\";export NSYS_OPTS=\"$NSYS_OPTS\";$NSYS_BASEDIR/bin/$1 $2 $3"
 	else
 		export NSYS_BASEDIR=$NSYS_BASEDIR
 		export APPLICATION_DESC="$APPLICATION_DESC"
+		export NSYS_OPTS="$NSYS_OPTS"
 		$NSYS_BASEDIR/bin/$1 $2 $3
 	fi
 }
