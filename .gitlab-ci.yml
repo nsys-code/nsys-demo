@@ -18,4 +18,4 @@ build-bundle:
   script: mvn clean resources:resources install deploy $NSYS_OPTS -U
   artifacts:
     paths:
-      - nsys-bundle/target/nsys-demo-bundle-${BUILD_NUMBER}.zip
+      - nsys-demo-bundle/target/nsys-demo-bundle-${BUILD_NUMBER}.zip
