@@ -36,9 +36,9 @@
 		<link>http://confluence.nsys.org</link>
 	</navigation-item>
 
-	<navigation-item key="nsys-portal_appswitcher_teamcity" name="Nsys TeamCity" section="system.top.navigation.appswitcher" weight="0">
-		<label>TeamCity</label>
-		<link>https://teamcity.nsys.org</link>
+	<navigation-item key="nsys-portal_appswitcher_gitlab" name="Nsys GitLab" section="system.top.navigation.appswitcher" weight="0">
+		<label>GitLab</label>
+		<link>https://gitlab.nsys.org</link>
 	</navigation-item>
 
     <!-- Navigation 'system.top.navigation.appswitcher' [END] -->
@@ -57,6 +57,9 @@
 	<navigation-section key="nsys-portal_nav-main_dashboards" name="Dashboards" location="system.top.navigation.bar/dashboards" weight="0">
 		<label>Dashboards</label>
 		<description>View and manage your dashboards</description>
+		<conditions>
+			<condition class="org.nsys.portal.conditions.UserIsLoggedInCondition" />
+		</conditions>
 	</navigation-section>
 	
 	<navigation-item key="nsys-portal_nav-main_dashboards_view" name="View System Dashboard" section="system.top.navigation.bar/dashboards" weight="0">
@@ -74,6 +77,9 @@
 
 	<navigation-section key="nsys-portal_nav-main_reports" name="Reports" location="system.top.navigation.bar/reports" weight="0">
 		<label>Reports</label>
+		<conditions>
+			<condition class="org.nsys.portal.conditions.UserIsLoggedInCondition" />
+		</conditions>
 	</navigation-section>
 
 	<navigation-item key="nsys-portal_nav-main_reports_sample" name="Sample Report" section="system.top.navigation.bar/reports" weight="0">
@@ -87,6 +93,9 @@
 	<navigation-section key="nsys-portal_nav-main_system" name="System" location="system.top.navigation.bar/system" weight="0">
 		<label>System</label>
 		<description>Nsys Platform Management</description>
+		<conditions>
+			<condition class="org.nsys.portal.conditions.UserIsLoggedInCondition" />
+		</conditions>
 	</navigation-section>
 
 	<navigation-item key="nsys-portal_nav-main_system_infra-mgmt" name="Nsys Infrastructure Manager" section="system.top.navigation.bar/system" weight="0">
@@ -116,7 +125,7 @@
 
 	<navigation-item key="nsys-portal_footer-links_builds" name="Nsys Builds" section="footer.links" weight="0">
 		<label>Builds</label>
-		<link>https://teamcity.nsys.org</link>
+		<link>https://gitlab.nsys.org</link>
 	</navigation-item>
 
 	<navigation-item key="nsys-portal_footer-links_doc" name="Nsys Documentation" section="footer.links" weight="0">
