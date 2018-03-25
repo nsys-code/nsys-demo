@@ -30,9 +30,9 @@ build-nsys-demo:
   before_script:
     - docker login -u "$DOCKER_REGISTRY_USER" -p "$DOCKER_REGISTRY_PWD"
   script:
+    - cp docker-images/scripts/nsys-demo-installer.sh docker-images/nsys-demo/
+    - cp nsys-demo-bundle/target/nsys-demo-bundle-${BUILD_NUMBER}.zip docker-images/nsys-demo/nsys-demo-bundle.zip
     - cd docker-images/nsys-demo
-    - cp `pwd`/../scripts/nsys-demo-installer.sh ./
-    - cp nsys-demo-bundle/target/nsys-demo-bundle-${BUILD_NUMBER}.zip ./nsys-demo-bundle.zip
     - docker build --pull --no-cache -t nsys/nsys-demo .
     - docker push nsys/nsys-demo
 
@@ -43,9 +43,9 @@ build-nsys-demo-node:
   before_script:
     - docker login -u "$DOCKER_REGISTRY_USER" -p "$DOCKER_REGISTRY_PWD"
   script:
+    - cp docker-images/scripts/nsys-demo-installer.sh docker-images/nsys-demo-node/
+    - cp nsys-demo-bundle/target/nsys-demo-bundle-${BUILD_NUMBER}.zip docker-images/nsys-demo-node/nsys-demo-bundle.zip
     - cd docker-images/nsys-demo-node
-    - cp `pwd`/../scripts/nsys-demo-installer.sh ./
-    - cp nsys-demo-bundle/target/nsys-demo-bundle-${BUILD_NUMBER}.zip ./nsys-demo-bundle.zip
     - docker build --pull --no-cache -t nsys/nsys-demo-node .
     - docker push nsys/nsys-demo-node
 
