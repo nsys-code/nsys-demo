@@ -2,6 +2,7 @@ image: docker:latest
 
 stages:
   - build-bundle
+  - build-image
   - build-number-update
 
 variables:
@@ -21,6 +22,32 @@ build-bundle:
   artifacts:
     paths:
       - nsys-demo-bundle/target/nsys-demo-bundle-${BUILD_NUMBER}.zip
+
+build-nsys-demo:
+  stage: build-image
+  dependencies:
+    - build-bundle
+  before_script:
+    - docker login -u "$DOCKER_REGISTRY_USER" -p "$DOCKER_REGISTRY_PWD"
+  script:
+    - cd docker-images/nsys-demo
+    - cp `pwd`/../scripts/nsys-demo-installer.sh ./
+    - cp nsys-demo-bundle/target/nsys-demo-bundle-${BUILD_NUMBER}.zip ./nsys-demo-bundle.zip
+    - docker build --pull --no-cache -t nsys/nsys-demo .
+    - docker push nsys/nsys-demo
+
+build-nsys-demo-node:
+  stage: build-image
+  dependencies:
+    - build-bundle
+  before_script:
+    - docker login -u "$DOCKER_REGISTRY_USER" -p "$DOCKER_REGISTRY_PWD"
+  script:
+    - cd docker-images/nsys-demo-node
+    - cp `pwd`/../scripts/nsys-demo-installer.sh ./
+    - cp nsys-demo-bundle/target/nsys-demo-bundle-${BUILD_NUMBER}.zip ./nsys-demo-bundle.zip
+    - docker build --pull --no-cache -t nsys/nsys-demo-node .
+    - docker push nsys/nsys-demo-node
 
 build-number-update:
   image: ubuntu:16.04
