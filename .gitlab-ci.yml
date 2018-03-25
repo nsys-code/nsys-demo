@@ -6,6 +6,7 @@ stages:
 
 variables:
   BUILD_NUMBER: 1.0.0.$BUILD_COUNTER
+  GITLAB_HOST: "https://gitlab.nsys.org"
 
 before_script:
   - echo BUILD_NUMBER=$BUILD_NUMBER
