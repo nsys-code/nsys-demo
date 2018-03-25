@@ -2,9 +2,10 @@ image: docker:latest
 
 stages:
   - build-bundle
+  - build-number-update
 
 variables:
-  BUILD_NUMBER: 1.0.0.$CI_PIPELINE_ID
+  BUILD_NUMBER: 1.0.0.$BUILD_COUNTER
 
 before_script:
   - echo BUILD_NUMBER=$BUILD_NUMBER
@@ -19,3 +20,12 @@ build-bundle:
   artifacts:
     paths:
       - nsys-demo-bundle/target/nsys-demo-bundle-${BUILD_NUMBER}.zip
+
+build-number-update:
+  image: ubuntu:16.04
+  stage: build-number-update
+  before_script:
+    - apt-get update -y && apt-get install curl -y
+  script:
+    - export COUNTER=$((BUILD_COUNTER+1))
+    - curl -X PUT -H "PRIVATE-TOKEN:$GITLAB_TOKEN" $GITLAB_HOST/api/v4/projects/10/variables/BUILD_COUNTER -F value=$COUNTER
