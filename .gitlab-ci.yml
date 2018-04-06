@@ -3,7 +3,7 @@ image: docker:latest
 stages:
   - build-bundle
   - build-image
-  - build-number-update
+  - build-counter-update
 
 variables:
   BUILD_NUMBER: 1.0.0.$BUILD_COUNTER
@@ -49,9 +49,9 @@ build-nsys-demo-node:
     - docker build --pull --no-cache -t nsys/nsys-demo-node .
     - docker push nsys/nsys-demo-node
 
-build-number-update:
+build-counter-update:
   image: ubuntu:16.04
-  stage: build-number-update
+  stage: build-counter-update
   before_script:
     - apt-get update -y && apt-get install curl -y
   script:
