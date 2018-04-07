@@ -8,6 +8,8 @@ echo You need to build Nsys Demo at first! Please run command 'build.bat' ... >&
 GOTO EXIT
 
 :CONTINUE
-%NSYS_BUNDLE_DIR%\bin\nsys-launcher.bat nsys-daemon run
+SET DOCKER_OPTS=-p 9180:9180 -v %NSYS_BUNDLE_DIR%:/opt/nsys-demo
+
+docker run -it --rm %DOCKER_OPTS% nsys/nsys-demo-node /opt/nsys-demo/bin/nsys-launcher.sh nsys-daemon run %*
 
 :EXIT
