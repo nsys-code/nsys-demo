@@ -17,11 +17,11 @@
     <name>Nsys Demo Collector</name>
     <description>Sample add-on for Nsys Daemon</description>
     <packaging>nsys-plugin</packaging>
-    <url>http://nsys.org</url>
+    <url>https://nsys.org</url>
 
 	<organization>
 		<name>Nsys</name>
-		<url>http://www.nsys.org</url>
+		<url>https://www.nsys.org</url>
 	</organization>
   
 	<issueManagement>

@@ -16,11 +16,11 @@
     <artifactId>nsys-demo-bundle</artifactId>
     <name>Nsys Demo Bundle</name>
     <packaging>pom</packaging>
-    <url>http://nsys.org</url>
+    <url>https://nsys.org</url>
 
 	<organization>
 		<name>Nsys</name>
-		<url>http://www.nsys.org</url>
+		<url>https://www.nsys.org</url>
 	</organization>
 
 	<issueManagement>
