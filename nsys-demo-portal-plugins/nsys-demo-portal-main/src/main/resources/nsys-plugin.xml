@@ -33,7 +33,7 @@
 
 	<navigation-item key="nsys-portal_appswitcher_confluence" name="Nsys Confluence" section="system.top.navigation.appswitcher" weight="0">
 		<label>Confluence</label>
-		<link>http://confluence.nsys.org</link>
+		<link>https://confluence.nsys.org</link>
 	</navigation-item>
 
 	<navigation-item key="nsys-portal_appswitcher_gitlab" name="Nsys GitLab" section="system.top.navigation.appswitcher" weight="0">
@@ -139,27 +139,27 @@
 
 	<navigation-item key="nsys-portal_header-links_help_nsys-platform" name="Nsys Platform Help" section="header.links/help" weight="0">
 		<label>Nsys Platform</label>
-		<link>http://doc.nsys.org/display/NSYS</link>
+		<link>https://doc.nsys.org/display/NSYS</link>
 	</navigation-item>
 	
 	<navigation-item key="nsys-portal_header-links_help_nsys-daemon" name="Nsys Daemon Help" section="header.links/help" weight="0">
 		<label>Nsys Daemon</label>
-		<link>http://doc.nsys.org/display/NSYS/Nsys+Daemon</link>
+		<link>https://doc.nsys.org/display/NSYS/Nsys+Daemon</link>
 	</navigation-item>
 	
 	<navigation-item key="nsys-portal_header-links_help_nsys-portal" name="Nsys Portal Help" section="header.links/help" weight="0">
 		<label>Nsys Portal</label>
-		<link>http://doc.nsys.org/display/NSYS/Nsys+Portal</link>
+		<link>https://doc.nsys.org/display/NSYS/Nsys+Portal</link>
 	</navigation-item>
 	
 	<navigation-item key="nsys-portal_header-links_help_nsys-terminal" name="Nsys Terminal Help" section="header.links/help" weight="0">
 		<label>Nsys Terminal</label>
-		<link>http://doc.nsys.org/display/NSYS/Nsys+Terminal</link>
+		<link>https://doc.nsys.org/display/NSYS/Nsys+Terminal</link>
 	</navigation-item>
 	
 	<navigation-item key="nsys-portal_header-links_help_nsys-api" name="Nsys API Help" section="header.links/help" weight="0">
 		<label>Nsys Remote API Reference</label>
-		<link>http://doc.nsys.org/display/NSYS/Nsys+Remote+API+Reference</link>
+		<link>https://doc.nsys.org/display/NSYS/Nsys+Remote+API+Reference</link>
 	</navigation-item>
 
     <!-- Navigation 'header.links/help' [END] -->
