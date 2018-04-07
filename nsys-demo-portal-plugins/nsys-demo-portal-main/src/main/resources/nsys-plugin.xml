@@ -130,7 +130,7 @@
 
 	<navigation-item key="nsys-portal_footer-links_doc" name="Nsys Documentation" section="footer.links" weight="0">
 		<label>Documentation</label>
-		<link>http://doc.nsys.org/display/NSYS</link>
+		<link>https://doc.nsys.org/display/NSYS</link>
 	</navigation-item>
 
     <!-- Navigation 'footer.links' [END] -->
