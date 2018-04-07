@@ -4,6 +4,7 @@ stages:
   - build-bundle
   - build-image
   - build-counter-update
+  - dependency-build
 
 variables:
   BUILD_NUMBER: 1.0.0.$BUILD_COUNTER
@@ -57,3 +58,11 @@ build-counter-update:
   script:
     - export COUNTER=$((BUILD_COUNTER+1))
     - curl -X PUT -H "PRIVATE-TOKEN:$GITLAB_TOKEN" $GITLAB_HOST/api/v4/projects/10/variables/BUILD_COUNTER -F value=$COUNTER
+
+build-nsys-demo-cloud:
+  image: ubuntu:16.04
+  stage: dependency-build
+  before_script:
+    - apt-get update -y && apt-get install curl -y
+  script:
+    - curl -X POST -F token=$TRIGGER_TOKEN_NSYS_DEMO -F ref=master $GITLAB_HOST/api/v4/projects/13/trigger/pipeline
