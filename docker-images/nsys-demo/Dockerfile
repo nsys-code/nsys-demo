@@ -27,4 +27,6 @@ RUN ./nsys-setup.sh
 EXPOSE 9160
 EXPOSE 9180
 
+VOLUME ["/var/nsys-demo/application-data"]
+
 CMD ["sh", "nsys-launcher.sh"]
