@@ -50,13 +50,13 @@
     	<repository>
       		<id>nsys-maven-repository</id>
     		<name>Nsys Repository - Releases</name>
-      		<url>http://maven.nsys.org/repository/releases/</url>
+      		<url>https://maven.nsys.org/repository/releases/</url>
     		<layout>default</layout>
     	</repository>
     	<snapshotRepository>
       		<id>nsys-maven-repository</id>
     		<name>Nsys Repository - Snapshots</name>
-      		<url>http://maven.nsys.org/repository/snapshots/</url>
+      		<url>https://maven.nsys.org/repository/snapshots/</url>
     		<layout>default</layout>
     		<uniqueVersion>false</uniqueVersion>
     	</snapshotRepository>
@@ -66,12 +66,12 @@
 		<repository>
 			<id>nsys-dev-repository</id>
 			<name>The Nsys Development Repository</name>
-			<url>http://maven.nsys.org/repository/releases</url>
+			<url>https://maven.nsys.org/repository/releases</url>
 		</repository>
 		<repository>
 			<id>nsys-dev-repository-snapshots</id>
 			<name>The Nsys Development Repository - Snapshots</name>
-			<url>http://maven.nsys.org/repository/snapshots</url>
+			<url>https://maven.nsys.org/repository/snapshots</url>
 		</repository>
   	</repositories>
   	
@@ -79,12 +79,12 @@
         <pluginRepository>
 			<id>nsys-dev-repository</id>
 			<name>The Nsys Development Repository</name>
-			<url>http://maven.nsys.org/repository/releases</url>
+			<url>https://maven.nsys.org/repository/releases</url>
         </pluginRepository>
         <pluginRepository>
 			<id>nsys-dev-repository-snapshots</id>
 			<name>The Nsys Development Repository - Snapshots</name>
-			<url>http://maven.nsys.org/repository/snapshots</url>
+			<url>https://maven.nsys.org/repository/snapshots</url>
         </pluginRepository>
     </pluginRepositories>
   
