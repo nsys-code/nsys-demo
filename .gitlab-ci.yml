@@ -51,7 +51,7 @@ build-nsys-demo-node:
     - docker push nsys/nsys-demo-node
 
 build-counter-update:
-  image: ubuntu:18.04
+  image: ubuntu:22.04
   stage: build-counter-update
   before_script:
     - apt-get update -y && apt-get install curl -y
@@ -60,7 +60,7 @@ build-counter-update:
     - curl -X PUT -H "PRIVATE-TOKEN:$GITLAB_TOKEN" $GITLAB_HOST/api/v4/projects/10/variables/BUILD_COUNTER -F value=$COUNTER
 
 build-nsys-demo-cloud:
-  image: ubuntu:18.04
+  image: ubuntu:22.04
   stage: dependency-build
   before_script:
     - apt-get update -y && apt-get install curl -y
