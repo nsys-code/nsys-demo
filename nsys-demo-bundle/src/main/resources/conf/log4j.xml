@@ -56,6 +56,10 @@
         <level value="ERROR" />
     </logger>
 
+    <logger name="org.nsys.daemon.server.servlet.DaemonDispatcherServlet">
+        <level value="ERROR" />
+    </logger>
+
     <root>
         <priority value="DEBUG" />
         <appender-ref ref="rollingLogFileAppender" />

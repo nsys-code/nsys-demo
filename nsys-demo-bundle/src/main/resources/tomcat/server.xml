@@ -20,6 +20,7 @@
      Documentation at /docs/config/server.html
  -->
 <Server port="${nsys.portal.rmi.port}" shutdown="SHUTDOWN">
+  <!--<Listener className="org.apache.catalina.startup.VersionLoggerListener" />-->
   <!-- Security listener. Documentation at /docs/config/listeners.html
   <Listener className="org.apache.catalina.security.SecurityListener" />
   -->
@@ -59,7 +60,6 @@
         maxThreads="150" minSpareThreads="4"/>
     -->
 
-
     <!-- A "Connector" represents an endpoint by which requests are received
          and responses are returned. Documentation at :
          Java HTTP Connector: /docs/config/http.html (blocking & non-blocking)
@@ -88,9 +88,12 @@
                clientAuth="false" sslProtocol="TLS" />
     -->
 
-    <!-- Define an AJP 1.3 Connector on port 9150 -->
-    <Connector port="${nsys.portal.ajp.port}" protocol="AJP/1.3" redirectPort="${nsys.portal.https.port}" />
-
+    <!-- Define an AJP 1.3 Connector on port 9050 -->
+    <Connector protocol="AJP/1.3"
+               address="::1"
+               port="${nsys.portal.ajp.port}"
+               redirectPort="${nsys.portal.https.port}"
+               secretRequired="false" />
 
     <!-- An Engine represents the entry point (within Catalina) that processes
          every request.  The Engine implementation for Tomcat stand alone
@@ -124,8 +127,8 @@
       <!-- Nsys Portal web application -->
       <Host name="localhost"  appBase="webapps/nsys-portal-webapp"
             unpackWARs="true" autoDeploy="true">
-            
-		<Context path="" docBase="" reloadable="true" />
+
+        <Context path="" docBase="" reloadable="true" />
 
         <!-- SingleSignOn valve, share authentication between web applications
              Documentation at: /docs/config/valve.html -->
@@ -133,7 +136,7 @@
         <Valve className="org.apache.catalina.authenticator.SingleSignOn" />
         -->
 
-		<!-- Handling redirects behind the external HTTPs reverse proxy -->
+        <!-- Handling redirects behind the external HTTPs reverse proxy -->
         <Valve className="org.apache.catalina.valves.RemoteIpValve"
                remoteIpHeader="X-Forwarded-For"
                protocolHeader="X-Forwarded-Proto"
@@ -146,8 +149,8 @@
                prefix="localhost_access_log." suffix=".txt"
                pattern="%h %l %u %t &quot;%r&quot; %s %b" />
       </Host>
-      
-      <!-- Nsys Daemon web node 
+
+      <!-- Nsys Daemon web node
       <Host name="daemon.nsys.org" appBase="webapps/nsys-daemon-webapp"
             unpackWARs="true" autoDeploy="true" xmlValidation="false" xmlNamespaceAware="false">
         <Context path="" docBase="" reloadable="true" />
@@ -158,7 +161,7 @@
       </Host>
       -->
 
-      <!-- Nsys Demo Portal  
+      <!-- Nsys Demo Portal
       <Host name="demo.nsys.org" appBase="webapps/nsys-demo-webapp"
             unpackWARs="true" autoDeploy="true" xmlValidation="false" xmlNamespaceAware="false">
         <Context path="" docBase="" reloadable="true" />
@@ -168,7 +171,7 @@
 		<Valve className="org.apache.catalina.valves.RemoteIpValve" remoteIpHeader="X-Forwarded-For" protocolHeader="X-Forwarded-Proto" protocolHeaderHttpsValue="https" />
       </Host>
       -->
-      
+
     </Engine>
   </Service>
 </Server>

@@ -94,8 +94,9 @@
                 	<productVersion>${nsys.version}</productVersion>
                 	<buildNumber>${build.number}</buildNumber> <!-- ${build.number}=${build.version}.${build.counter} -->
                 	<jvmArgs>-Dnsys.demo.debug=true</jvmArgs>
-                	<!-- <nsysDaemonLite>true</nsysDaemonLite> -->
-                	<!-- <nsysConfigPath>${project.build.directory}/container/nsys1x/conf/nsys.cfg</nsysConfigPath> -->
+					<port>9181</port>
+					<!-- <nsysDaemonLite>true</nsysDaemonLite> -->
+                	<nsysConfigPath>${project.build.directory}/container/nsys1x/conf/nsys.cfg</nsysConfigPath>
                 	<!-- <log4jConfigPath>${project.build.directory}/container/nsys1x/conf/log4j.xml</log4jConfigPath> -->
                 	<bundleEntries>
                 		<Bundle-Name>${project.artifactId}</Bundle-Name>

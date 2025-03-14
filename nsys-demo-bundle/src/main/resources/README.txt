@@ -18,7 +18,7 @@ Quick Installation
 ----------------------
 
 Requirements:
-* Oracle JDK 1.7+ or Open JDK 1.7+ (Java)
+* Oracle JDK 1.8+ or Open JDK 1.8+ (Java)
 
 If your system does not meet the above requirements, please read the
 installation documentation: http://doc.nsys.org
