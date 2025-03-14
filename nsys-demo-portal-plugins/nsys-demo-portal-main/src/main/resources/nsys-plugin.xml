@@ -118,6 +118,12 @@
 
     <!-- Navigation 'footer.links' [BEGIN] -->
 
+	<navigation-item key="nsys-portal_footer-links_api" name="Nsys API" section="footer.links" weight="0">
+		<label>API</label>
+		<link>/api-docs</link>
+		<description>API Repository</description>
+	</navigation-item>
+
 	<navigation-item key="nsys-portal_footer-links_issues" name="Nsys Issues" section="footer.links" weight="0">
 		<label>Issues</label>
 		<link>https://jira.nsys.org/browse/NSYS</link>

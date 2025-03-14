@@ -18,6 +18,12 @@
     <!-- Scans and register beans using annotation-config (metadata) -->
     <context:component-scan base-package="org.nsys.demo.daemon.collector.api" />
 
+    <bean id="openApiFeature" class="org.apache.cxf.jaxrs.openapi.OpenApiFeature">
+        <property name="scan" value="false" />
+        <property name="useContextBasedConfig" value="true" />
+        <property name="resourcePackages" value="org.nsys.demo.daemon.collector.api" />
+    </bean>
+
     <jaxws:endpoint id="soapContainer" address="/ws" implementor="#collectorSoapService">
 	</jaxws:endpoint>
 
@@ -33,6 +39,7 @@
         </jaxrs:providers>
         <jaxrs:features>
             <!-- <cxf:logging /> -->
+            <ref bean="openApiFeature" />
         </jaxrs:features>
         <jaxrs:extensionMappings>
             <entry key="json" value="application/json" /> <!-- Use .json to get data in JSON format -->
